@@ -24,7 +24,7 @@ router.post('/post', upload.single('productImage'),async(req, res) => {
         name:req.body.name,
         description:req.body.description,
         price:req.body.price,
-        productImage: req.file.path
+        productImage: req.file.orginalname
     })
     try{
         const dataToSave = await data.save();
